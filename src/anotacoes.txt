@@ -1,0 +1,23 @@
+para abrir o banco sqlite
+extensao SQLite no vs code mesmo, digita ctrl+shift+p e busca SQLite open database
+
+ou
+
+https://www.beekeeperstudio.io/
+conection type: SQLite
+choose file, arquivo no projeto
+
+documentação type orm
+https://typeorm.io/#/
+
+horario padrao é com 3hrs a mais, vem do utc
+https://time.is/pt_br/UTC
+
+yarn init -y 
+yarn add express
+yarn add @types/express -D
+yarn add typescript -D 
+yarn add ts-node-dev -D
+yarn add typeorm reflect-metadata sqlite3
+yarn add uuid
+yarn add @types/uuid -D
