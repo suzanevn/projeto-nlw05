@@ -21,3 +21,14 @@ yarn add ts-node-dev -D
 yarn add typeorm reflect-metadata sqlite3
 yarn add uuid
 yarn add @types/uuid -D
+
+1 executa yarn typeorm migration:create -n CreateMessages, para aparecer a classe em database>migrations
+2 preenche os dados do campo no arquivo criato
+3 quando cria a tabela no migrations roda: yarn typeorm migration:run
+4 cria o arquivo na pasta entities (ex.: Message.ts)
+5 cria o arquivo na pasta repositories (ex: MessagesRepository.ts)
+6 cria o arquivo na pasta services (ex: MessagesService.ts)
+7 cria o arquivo na pasta controller (ex: MessagesController.ts)
+
+
+gera id uuid https://www.uuidgenerator.net/
