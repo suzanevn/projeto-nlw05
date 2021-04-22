@@ -21,6 +21,11 @@ yarn add ts-node-dev -D
 yarn add typeorm reflect-metadata sqlite3
 yarn add uuid
 yarn add @types/uuid -D
+aula 4
+yarn add socket.io    //é o server,  https://www.npmjs.com/package/socket.io
+yarn add @types/socket.io -D
+yarn add ejs
+yarn add socket.io-client       // é o client, para o front(pasta public)
 
 1 executa yarn typeorm migration:create -n CreateMessages, para aparecer a classe em database>migrations
 2 preenche os dados do campo no arquivo criato
@@ -32,3 +37,8 @@ yarn add @types/uuid -D
 
 
 gera id uuid https://www.uuidgenerator.net/
+
+
+
+codigo de outra pessoa
+https://github.com/EliasGcf/nlw-05-nodejs/tree/bb39c717110525a2b1eeb8c5c55c372abd24d31f

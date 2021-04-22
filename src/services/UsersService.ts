@@ -3,15 +3,15 @@ import { User } from "../entities/User";
 import { UsersRepository } from "../repositories/UsersRepository"
 
 class UsersService {
-    private usersRepositoy: Repository<User>;
+    private usersRepository: Repository<User>;
 
     constructor(){
-        this.usersRepositoy = getCustomRepository(UsersRepository);
+        this.usersRepository = getCustomRepository(UsersRepository);
     }
 
     async create(email: string) {
         // verificar se usuario existe
-        const userExists = await this.usersRepositoy.findOne({
+        const userExists = await this.usersRepository.findOne({
             email
         })
         // se existir, retornar user
@@ -19,15 +19,20 @@ class UsersService {
             return userExists;
         }
 
-        const user = this.usersRepositoy.create({
+        const user = this.usersRepository.create({
             email
         })
 
-        await this.usersRepositoy.save(user);
+        await this.usersRepository.save(user);
         // se nao existe, salva no banco
         return user;
-
     }
+
+    async findByEmail(email: string) {
+        const user = await this.usersRepository.findOne({ email });
+        return user;
+    }
+
 }
 
 export { UsersService }
