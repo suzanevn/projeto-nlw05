@@ -48,6 +48,7 @@ gera id uuid https://www.uuidgenerator.net/
 
 codigo de outra pessoa
 https://github.com/EliasGcf/nlw-05-nodejs/tree/bb39c717110525a2b1eeb8c5c55c372abd24d31f
+https://github.com/EliasGcf/nlw-05-nodejs/blob/a9ff45bc1128a740d124c52b96117024f351625e/public/js/admin.js
 
 
 arquivo admin.js 
