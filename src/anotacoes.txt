@@ -1,3 +1,6 @@
+instalar yarn npm install -g yarn
+yarn install
+
 rodar: yarn dev
 pagina: http://localhost:3333/pages/client
 pagina admin: http://localhost:3333/pages/admin
@@ -63,7 +66,14 @@ linha 101
         `allMessages${data.message.user_id}`
     );
 
-arquivo admin.ts
+****arquivo websocket> admin.ts
 - comentei linha 38, se salvar muda no banco e não traz mais o usuario em atendimento na tela admin
     await connectionsService.updateAdminID(user_id, socket.id);
+
+- se quiser descomentar a linha acima, depois roda o sqlite abaixo e volta os atendimentos:
+botao direito na tabela no sqlite explorer, depois clica em new query e cola o sql:
+UPDATE connections
+SET admin_id = NULL
+WHERE
+    id= "21a7d276-cf01-4fe5-a0ac-4954ce4073d2"    
 
