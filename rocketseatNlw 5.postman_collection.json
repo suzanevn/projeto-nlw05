@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "8e2c5e08-46c5-408d-ad01-883eb7276629",
+		"name": "rocketseatNlw 5",
+		"description": "aulas do rocketseat nlw 05\nnode backende",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "adicionar settings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chat\": true,\r\n    \"username\": \"teste1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/settings",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"settings"
+					]
+				},
+				"description": "adicionar settings"
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"abcd@teste.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"02d9f969-9060-46b2-8beb-9a88720856eb\",\r\n    \"text\": \"olá testando\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message atendente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"02d9f969-9060-46b2-8beb-9a88720856eb\",\r\n    \"text\": \"olá testando\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list message by user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Update Settings",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chat\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/settings/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"settings",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

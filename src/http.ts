@@ -16,6 +16,10 @@ app.get("/pages/client", (request, response)=>{
     return response.render("html/client.html"); // chamar http://localhost:3333/pages/client
 })
 
+app.get("/pages/admin", (request, response)=>{
+    return response.render("html/admin.html"); // chamar http://localhost:3333/pages/admin
+})
+
 const http = createServer(app); // criando protocolo http
 const io = new Server(http); // criando protocolo web socket
 

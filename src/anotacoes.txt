@@ -1,4 +1,10 @@
-para abrir o banco sqlite
+rodar: yarn dev
+pagina: http://localhost:3333/pages/client
+pagina admin: http://localhost:3333/pages/admin
+
+arrquivo "rocketseatNlw 5.postman_collection.json" , links do postman para importar
+
+para abrir o BANCO sqlite
 extensao SQLite no vs code mesmo, digita ctrl+shift+p e busca SQLite open database
 
 ou
@@ -42,3 +48,21 @@ gera id uuid https://www.uuidgenerator.net/
 
 codigo de outra pessoa
 https://github.com/EliasGcf/nlw-05-nodejs/tree/bb39c717110525a2b1eeb8c5c55c372abd24d31f
+
+
+arquivo admin.js 
+linha 101
+- tive q fazer diferente para funcionar
+    original nao funcionou:
+    //const divMessages = document.getElementById(
+    //     `allMessages${connection.user_id}`
+    // );
+    funcionou assim:
+    const divMessages = document.getElementById(
+        `allMessages${data.message.user_id}`
+    );
+
+arquivo admin.ts
+- comentei linha 38, se salvar muda no banco e não traz mais o usuario em atendimento na tela admin
+    await connectionsService.updateAdminID(user_id, socket.id);
+
